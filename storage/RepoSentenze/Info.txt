@@ -1,0 +1,129 @@
+*> Diritto delle imprese
+**> Invalidità (nullità e annullabilità) delle deliberazioni sociali
+
+<p>Il regime di invalidità delle deliberazioni sociali è ampiamente variabile in relazione al tipo societario (es. società di persone, s.r.l., s.p.a., cooperativa), alla tipologia di delibera (es. assembleare o consiliare) e al vizio lamentato (annullabilità o nullità).</p>
+
+<p>La casistica mostra una prevalenza di impugnazioni aventi a oggetto delibere dei soci di s.r.l., tipo societario più diffuso, con esiti variabili, ma in larga misura dipendenti dalle concrete modalità con le quali risulta adottata la delibera.</p>
+
+<p>In particolare, non sono trascurabili le ipotesi in cui il vizio denunciato attenga a profili procedimentali, investendo la regolarità della convocazione o il rispetto del diritto di informazione dei soci, e derivi in ultima istanza dal mancato rispetto delle disposizioni di legge ovvero delle norme dello statuto sociale.  Le violazioni in tale ambito sono talora di portata tale (inesistenza della convocazione, difetto assoluto di informazione) da determinare la nullità della delibera. Con minore frequenza emergono pronunce di annullamento con riferimento all’oggetto della delibera, salva l’ipotesi, invero di non agevole riscontro, di abuso della maggioranza.</p>
+
+<p>Un rilievo autonomo rivestono le numerose impugnazioni aventi a oggetto il bilancio, i cui vizi determinano la radicale nullità della delibera di approvazione, alla luce dell’interesse generale sotteso alla veridicità dei bilanci sociali (il tribunale aderisce all’orientamento del tutto prevalente della giurisprudenza di legittimità, che ritiene, per tali ragioni, non compromettibili in arbitri tali controversie). La natura, le dimensioni e la diversa complessità dell’attività di ogni singola società, le specificità di ciascun esercizio sociale e l’ampio ricorso a regole della tecnica contabile e aziendalistica influenzano in modo decisivo l’esito di questa tipologia di cause.</p>
+
+<p>Ricorre frequentemente, nell’ambito del contenzioso che interessa le società cooperative, la fattispecie dell’opposizione alla delibera di esclusione del socio, giudizio che in un numero non trascurabile di casi si conclude favorevolmente per l’opponente, il più delle volte in virtù delle obiettive carenze della delibera impugnata che, lungi dall’essere autosufficiente, omette di esplicitare i motivi alla base del provvedimento sanzionatorio.</p>
+
+<p>Infine va osservato come il contenzioso in esame registri un trascurabile numero di impugnazioni delle sentenze pronunciate in primo grado, a conferma della stabilità della decisione e dei principi in essa contenuti.</p>
+
+*> Diritto delle imprese
+**> Responsabilità dei componenti degli organi sociali
+
+<p>Nell’ambito delle azioni di responsabilità promosse nei confronti di amministratori e sindaci di società di capitali vale quanto osservato con riferimento alle impugnazioni delle deliberazioni: il regime legale varia sensibilmente in relazione al tipo societario e, specificamente, la maggioranza di procedimenti coinvolge gli organi sociali di s.r.l.</p>
+
+<p>Le azioni sono normalmente promosse nei confronti di amministratori e sindaci delle società e, con minor frequenza, nei confronti di direttori generali e società di revisione.</p>
+
+<p>Inoltre emerge chiaramente come la maggioranza delle azioni di responsabilità sorga nel contesto di una procedura concorsuale, mentre nelle società in bonis il ricorso allo strumento in questione presenta ancora una diffusione limitata (è tuttavia verosimile che le azioni di responsabilità esercitate nelle società in bonis risultino affidate, quanto al giudizio di cognizione, alla competenza arbitrale in virtù della clausola compromissoria contenuta nello statuto, di talché la competenza del tribunale resta circoscritta alla eventuale fase cautelare).</p>
+
+<p>La casistica più ricorrente è data dalla contestazione nei confronti di amministratori e sindaci della mancata adozione dei provvedimenti previsti dagli artt. 2447 e 2482 <i>ter</i> c.c., in ipotesi di verificazione della causa di scioglimento consistente nella perdita del capitale sociale: con riferimento a tale fattispecie, il campione esaminato evidenzia un elevato tasso di accoglimento delle domande del fallimento, a fronte di una limitata efficacia di eccezioni preliminari quali, ad esempio, la prescrizione.</p>
+
+<p>Risultano altrettanto frequenti e confortate da esiti in prevalenza favorevoli le contestazioni agli amministratori di atti costituenti una distrazione patrimoniale, quali la percezione di compensi non deliberati, prelievi di cassa ingiustificati e l’uso di beni aziendali per finalità private: in tali casi l’amministratore soddisfa raramente l’onere di provare la causa giustificatrice degli atti distrattivi contestati, risultando soccombente e tenuto a risarcire alla società il danno conseguente.
+In entrambe le ipotesi suindicate il dato favorevole per il fallimento attore è agevolmente comprensibile, se si considerano la terzietà del curatore e il filtro operato dal giudice delegato in sede di autorizzazione dell’azione.</p>
+
+<p>Più complesse risultano le valutazioni, con annesso calo del tasso di successo dell’azione, allorquando viene contestata una specifica operazione, dovendosi in tal caso superare il principio della tendenziale insindacabilità nel merito delle scelte gestionali, ove siano adottate sulla base di un processo decisionale idoneo e non emergano profili di anomalia, grave negligenza, irrazionalità ovvero situazioni di conflitto di interessi.</p>
+
+<p>A livello generale la rilevanza delle specifiche circostanze di fatto e la varietà di situazioni in cui può verificarsi un evento lesivo per la società o i suoi creditori rendono difficoltosa l’estrapolazione di regole di principio applicabili in via generale, specie con riferimento alla posizione dei sindaci, la cui responsabilità si atteggia in modo diverso a seconda del tipo di violazione accertata e del contributo causale, di regola omissivo, reso alla verificazione del danno.</p>
+
+<p>A quanto sopra osservato si aggiunga l’assai limitato numero di impugnazioni delle sentenze pronunciate in questo ambito di contenzioso, circostanza quest’ultima che, se da un lato evidenzia un elevato tasso di accettazione della decisione, dall’altro non consente di avere a disposizione un parametro utile alla valutazione della stabilità “verticale” della decisione e dei principi in essa contenuti.</p>
+
+*> Diritto delle imprese
+**> Concorrenza sleale
+
+<p>La casistica in materia di concorrenza sleale, disciplinata dagli artt. 2598 – 2601 c.c.,  si presenta oltremodo eterogenea.</p>
+
+<p>A livello generale prevale rispetto alle fattispecie tipiche (art. 2598 n. 1 e n. 2 c.c.) la contestazione di condotte ritenute in violazione della clausola generale prevista in via residuale dall’art. 2598 n. 3, norma che vieta l’uso tra imprenditori di <i>“ogni altro mezzo non conforme ai principi della correttezza professionale e idoneo a danneggiare l’altrui azienda”</i>.</p>
+
+<p>In tale ambito ricorre frequentemente la doglianza dell’imprenditore leso riguardo allo storno di personale commesso dal concorrente, spesso ricondotto a una iniziativa più ampia, finalizzata a sottrarre non soltanto risorse umane, ma anche informazioni riservate. Ove poi dette informazioni siano presentate come aventi carattere di segretezza e sensibile valore commerciale, possono trovare applicazione le norme del Codice della Proprietà Industriale in tema di “segreti aziendali”, come del resto avviene nelle ulteriori ipotesi in cui assumano rilievo in giudizio i segni distintivi dell’imprenditore ovvero altri titoli di proprietà industriale.</p>
+
+<p>La specificità delle singole vicende e la notevole rilevanza dei profili fattuali di tali controversie rendono assai arduo, in questa tipologia di contenzioso, estrapolare delle regole di principio applicabili in via universale. Tale difficoltà risulta accentuata dal limitato numero di impugnazioni delle sentenze pronunciate in questo ambito, circostanza quest’ultima che, ancora una volta, se da un lato evidenzia un elevato tasso di accettazione della decisione, dall’altro non consente di avere a disposizione un parametro utile alla valutazione della stabilità “verticale” della decisione e dei principi in essa contenuti.</p>
+
+<p>A livello generale è comunque possibile desumere dal campione di provvedimenti esaminato la tendenza a giudicare la correttezza delle condotte tra imprenditori avuto riguardo al modello economico-sociale di mercato, che connota la struttura economica dell’Unione Europea, e all’esigenza di non alterare le fisiologiche dinamiche concorrenziali, generando in via giudiziale distorsioni sproporzionate rispetto alla gravità della violazione accertata.</p>
+
+*> Diritto delle imprese
+**> Contratto di leasing
+
+<p>La legge 4 agosto 2017 n.124 definisce contratto di locazione finanziaria il contratto con il quale l’intermediario finanziario si obbliga ad acquistare (o a far costruire) un bene, sulla base delle indicazioni dell’utilizzatore che ne assume tutti i rischi, e lo mette a disposizione del medesimo per un dato periodo di tempo, a fronte di un corrispettivo determinato, che tiene conto del prezzo di acquisto (o di costruzione) e della durata del contratto. Alla scadenza del contratto l’utilizzatore ha diritto di acquistare la proprietà del bene ad un prezzo prestabilito ovvero, in caso di mancato esercizio del diritto, l’obbligo di restituirlo.</p>
+
+<p>I rapporti di <i>leasing</i> denotano un elevato livello di litigiosità: in particolare, la casistica giurisprudenziale discende da contestazioni dell’utilizzatore che investono la misura del tasso di interesse corrispettivo e di quello moratorio, sotto il profilo del rispetto della disciplina antiusura, il metodo di indicizzazione del canone, la mancata inclusione nella documentazione contrattuale di indicatori quali il TAEG e l’ISC,  la previsione del piano di ammortamento c.d. “alla francese”, con riferimento alla pratica dell’anatocismo, e la validità della clausola penale in ipotesi di leasing immobiliare.</p>
+
+<p>Il contenzioso in materia di <i>leasing</i> si innesta, nella maggioranza dei casi, all’interno di un’azione di recupero del credito avviata dall’intermediario concedente, nel corso della quale l’utilizzatore formula, in via di eccezione, le suesposte contestazioni. Queste ultime, tuttavia, ricorrono altresì  nell’ambito dei procedimenti, perlopiù sommari, instaurati dall’intermediario per ottenere il rilascio dell’immobile. Da ultimo non sono infrequenti le ipotesi in cui è lo stesso utilizzatore ad avviare un’azione di accertamento e di restituzione di somme nei confronti dell’intermediario, anche dopo la conclusione fisiologica del rapporto di <i>leasing</i>.</p>
+
+<p>A prescindere dalla genesi del contenzioso, l’esame del campione di provvedimenti consente di affermare che il tasso di accoglimento delle domande e delle eccezioni formulate dall’utilizzatore risulta notevolmente basso.</p>
+
+<p>Con particolare riferimento alle contestazioni in punto di indeterminatezza del corrispettivo in ragione dell’indicizzazione del canone, mancata indicazione di TAEG e ISC, piano di ammortamento c.d. “alla francese”, emerge un solido orientamento giurisprudenziale nel senso dell’insuccesso delle iniziative giudiziarie fondate su tali circostanze.</p>
+
+<p>Residuano margini di incertezza, derivanti anche da oscillazioni della giurisprudenza di legittimità, solamente con riguardo alla rilevanza dell’interesse di mora per le valutazioni in punto di usura, incertezze che dovrebbero tuttavia ridursi a seguito della recente rimessione della questione alle Sezioni Unite della Corte di Cassazione.</p>
+
+*> Diritto del lavoro
+**> Contributi
+
+<p>1. I <b>contributi</b> rappresentano le quote della retribuzione (nel caso di rapporti di lavoro subordinato) o del reddito di lavoro (nel caso del lavoro autonomo, in collaborazione o associato) destinate al finanziamento delle prestazioni previdenziali ed assistenziali previste dalla legge.</p>
+
+<p>Il loro versamento è, di norma, obbligatorio e la loro riscossione, unitamente all’erogazione delle prestazioni ed al controllo della corretta applicazione delle norme, è affidata agli enti di previdenza.</p>
+
+<p>2. Obbligato al versamento dei contributi per i rapporti di lavoro subordinato è, in via generale, il datore di lavoro (art. 2115 c.c.). Ai sensi dell’art. 29 del D. Lgs. n. 276 del 2003, il committente è responsabile in solido con l’appaltatore datore di lavoro in ordine al versamento dei contributi dovuti all'Inps per i lavoratori impiegati nell’appalto.</p>
+
+<p>Anche nei casi in cui l’onere contributivo è ripartito tra il datore e il prestatore (ad esempio per la pensione di anzianità), la quota di competenza di quest’ultimo viene ugualmente versata dal datore, il quale trattiene la somma corrispondente dalla retribuzione del lavoratore, restando così l’unico responsabile nei confronti degli enti previdenziali.</p>
+
+<p>Sono invece interamente a carico del prestatore i contributi dovuti per le attività di lavoro autonomo.</p>
+
+<p>Per le collaborazioni coordinate e continuative, per il lavoro a progetto, per le collaborazioni occasionali (solo se il reddito supera un certo importo) e per gli associati in partecipazione, l’obbligo contributivo grava per una quota sui committenti (i quali restano comunque responsabili del versamento), e per la parte restante sugli stessi lavoratori.</p>
+
+<p>3. Per i lavoratori dipendenti il versamento avviene alla Gestione ordinaria dell’Inps (Fondo pensioni lavoratori dipendenti, FPLD).</p>
+
+<p>Chi non è dipendente effettua invece il versamento alle varie gestioni speciali (come quella degli esercenti attività commerciali) o separate dell’Inps. Per i liberi professionisti l’ente previdenziale di competenza è la cassa previdenziale di categoria, ove la legge preveda tale cassa.</p>
+
+<p>4. La tipologia più ricorrente di controversie in materia contributiva ha ad oggetto le opposizioni proposte ai sensi dell’art. 24 D. Lgs. n. 46 del 1999 avverso gli avvisi di addebito con i quali l’Inps ingiunge il pagamento dei contributi previdenziali. Solitamente si tratta di contributi dovuti dai datori di lavoro al Fondo pensione lavoratori dipendenti, oppure di contributi che l’Istituto afferma essere dovuti da lavoratori autonomi alla Gestione Separata o alla Gestione Commercianti.</p>
+
+<p>4.1. Le pronunce pubblicate riguardano, quindi, giudizi della tipologia descritta e, in primo luogo, opposizioni ad avvisi di addebito emessi dall’Inps in forza dell’iscrizione d’ufficio degli opponenti alla Gestione Commercianti o alla Gestione Separata.</p>
+
+<p>In tali casi, poiché, ai sensi dell'art. 2697 cod. civ., l'onere di provare i fatti costitutivi del diritto grava sempre su colui che si afferma titolare del diritto stesso ed intende farlo valere, ancorché sia convenuto in giudizio, la sussistenza del credito contributivo dell'INPS, preteso con l’avviso di addebito, deve essere comprovata dall'Istituto.</p>
+
+<p>E così, in caso di avviso di addebito relativo a <b>contributi dovuti alla Gestione Commercianti</b> sulla base dell’iscrizione d’ufficio dell’opponente alla Gestione stessa, l’istituto dovrà dimostrare la sussistenza congiunta delle condizioni oggettive e soggettive previste dall’art. 1 commi 202 e 203 della legge 662/1996 che stabilisce: <i>"L'obbligo  di iscrizione nella Gestione assicurativa degli esercenti attività commerciali  di  cui  alla legge 22 luglio 1966, n. 613, e successive modificazioni ed integrazioni, sussiste per i soggetti che siano in possesso dei seguenti requisiti: a) siano  titolari o gestori in proprio di imprese che, a prescindere dal numero   dei   dipendenti,  siano  organizzate  e/o  dirette prevalentemente   con  il  lavoro  proprio  e  dei  componenti  la famiglia,  ivi  compresi  i  parenti  e  gli affini entro il terzo grado,  ovvero  siano  familiari  coadiutori  preposti al punto di vendita; b) abbiano  la  piena  responsabilità dell'impresa ed assumano tutti gli  oneri  ed i rischi relativi alla sua Gestione (...); c) partecipino  personalmente  al  lavoro  aziendale con carattere di abitualità e prevalenza; d) siano in possesso, ove previsto da leggi o regolamenti, di licenze o autorizzazioni e/o siano iscritti in albi, registri o ruoli"</i>.</p>
+
+<p>Ed ancora, in caso di avviso di addebito relativo a <b>contributi dovuti alla Gestione Separata</b> sulla base dell’iscrizione d’ufficio dell’opponente alla Gestione stessa, l’Istituto dovrà dimostrare la sussistenza dei presupposti per l’iscrizione, previsti dall'art. 2, comma 26, della L. n. 335 del 1995 (fatta oggetto nel 2011 di un intervento legislativo di interpretazione autentica) il quale così prevede: <i>“A decorrere dal 1 gennaio 1996, sono tenuti all'iscrizione presso una apposita Gestione Separata, presso l'INPS, e finalizzata all'estensione dell'assicurazione generale obbligatoria per l'invalidità, la vecchiaia ed i superstiti, i soggetti che esercitano per professione abituale, ancorché non esclusiva, attività di lavoro autonomo, di cui al comma 1 dell'articolo 49 del testo unico delle imposte sui redditi, approvato con D.P.R. 22 dicembre 1986, n. 917, e successive modificazioni ed integrazioni, nonché i titolari di rapporti di collaborazione coordinata e continuativa, di cui al comma 2, lettera a), dell'articolo 49 del medesimo testo unico e gli incaricati alla vendita a domicilio di cui all'articolo 36 della L. 11 giugno 1971, n. 426. Sono esclusi dall'obbligo i soggetti assegnatari di borse di studio, limitatamente alla relativa attività”</i>. Con il comma 12 dell’art. 18, allo scopo di individuare la platea dei destinatari dell'obbligo previsto dall'art. 2, comma 26, della L. n. 335 del 1995, è stata fornita un'interpretazione autentica di detta previsione: <i>“l'art. 2 comma 26 della L. n. 335 del 1995, si interpreta nel senso che i soggetti che esercitano per professione abituale, ancorché non esclusiva, attività di lavoro autonomo tenuti all'iscrizione presso l'apposita Gestione Separata Inps sono esclusivamente i soggetti che svolgono attività il cui esercizio non sia subordinato all'iscrizione ad appositi albi professionali, ovvero attività non soggette al versamento contributivo agli enti di cui al c.11, in base ai rispettivi statuti e ordinamenti, con esclusione dei soggetti di cui al comma 11. Resta ferma la disposizione di cui all'articolo 3, comma 1, lettera d), del D.Lgs. 10 febbraio 1996, n. 103. Sono fatti salvi i versamenti già effettuati ai sensi del citato articolo 2, comma 26, della L. n. 335 del 1995”</i>.</p>
+
+<p>4.2. In secondo luogo, le pronunce pubblicate riguardano opposizioni ad avvisi di addebito emessi dall’Inps nei confronti di datori di lavoro in forza del disconoscimento del diritto degli stessi di fruire dell’<b>esonero contributivo previsto dall’art. 1 co. 118 e ss. della legge n. 190 del 2014.</b></p>
+
+<p>Il legislatore ha introdotto nel corso del tempo varie ipotesi di esoneri o sgravi contributivi; si tratta di benefici di natura contributiva - collegati alla costituzione e gestione del rapporto di lavoro - che rappresentano una deroga all'ordinario regime contributivo, calcolato secondo i normali parametri statistico-attuariali. 
+Nello specifico, l’art. 1 co. 118 e ss. della legge n. 190 del 2014 dispone che <i>“Al fine di promuovere forme di occupazione stabile, ai datori di lavoro privati, con esclusione del settore agricolo, e con riferimento alle nuove assunzioni con contratto di lavoro a tempo indeterminato, con esclusione dei contratti di apprendistato e dei contratti di lavoro domestico, decorrenti dal 1° gennaio 2015 con riferimento a contratti stipulati non oltre il 31 dicembre 2015, è riconosciuto, per un periodo massimo di trentasei mesi, ferma restando l'aliquota di computo delle prestazioni pensionistiche, l'esonero dal versamento dei complessivi contributi previdenziali a carico dei datori di lavoro, con esclusione dei premi e contributi dovuti all'INAIL, nel limite massimo di un importo di esonero pari a 8.060 euro su base annua. L'esonero di cui al presente comma spetta ai datori di lavoro in presenza delle nuove assunzioni di cui al primo periodo, con esclusione di quelle relative a lavoratori che nei sei mesi precedenti siano risultati occupati a tempo indeterminato presso qualsiasi datore di lavoro, e non spetta con riferimento a lavoratori per i quali il beneficio di cui al presente comma sia già stato usufruito in relazione a precedente assunzione a tempo indeterminato. L'esonero di cui al presente comma non è cumulabile con altri esoneri o riduzioni delle aliquote di finanziamento previsti dalla normativa vigente. L'esonero di cui al presente comma non spetta ai datori di lavoro in presenza di assunzioni relative a lavoratori in riferimento ai quali i datori di lavoro, ivi considerando società controllate o collegate ai sensi dell'articolo 2359 del codice civile o facenti capo, anche per interposta persona, allo stesso soggetto, hanno comunque già in essere un contratto a tempo indeterminato nei tre mesi antecedenti la data di entrata in vigore della presente legge. (…)</i>.”</p>
+
+*> Diritto del lavoro
+**> Infortunio sul lavoro
+
+<p>La regola fondamentale in materia di infortuni sul lavoro è l’art. 2087 cod. civ. che obbliga il datore di lavoro ad adottare tutte le misure che, secondo la particolarità del lavoro, l’esperienza e la tecnica, sono necessarie a tutelate l’integrità fisica e la personalità morale dei dipendenti.</p>
+
+<p>Il datore di lavoro è responsabile in caso di violazione, sia di specifiche norme di legge antinfortunistiche (c.d. colpa specifica), sia di generiche norme di prudenza, diligenza o imperizia (c.d. colpa generica).</p>
+
+<p>La deliberata e ingiustificata inosservanza da parte del lavoratore delle direttive circa le modalità di svolgimento del lavoro può comportare l’esclusione della responsabilità del datore di lavoro.</p>
+
+<p>In giudizio, il lavoratore deve provare l’esistenza dell’infortunio e che questo si è verificato nello svolgimento del lavoro (c.d. nesso causale), mentre il datore di lavoro deve provare l’assenza di colpa.</p>
+
+<p>La responsabilità ex art. 2087 cod. civ. del datore di lavoro può estendersi anche al committente per gli infortuni dei dipendenti dell’appaltatore.</p>
+
+*> Diritto del lavoro
+**> Licenziamento disciplinare per giusta causa
+
+<p>È la sanzione disciplinare estrema che il datore di lavoro ha a disposizione per le condotte più gravi del lavoratore che viola le regole di comportamento stabilite dalla legge, dai contratti collettivi e che non rispetta le norme contenute nel codice disciplinare dell'azienda.</p>
+
+<p>Comporta la risoluzione immediata (c.d. in tronco) del rapporto.</p>
+
+<p>Prima di intimare il licenziamento il datore di lavoro deve contestare l’addebito al fine di consentire al lavoratore di presentare le sue giustificazioni.</p>
+
+<p>Il sindacato del giudice, oltre alla legittimità formale del licenziamento, riguarda sia la sussistenza dei fatti addebitati al lavoratore, sia la loro gravità ai fini delle proporzionalità della sanzione.</p>
+
+*> Diritto del lavoro
+**> Licenziamento per giustificato motivo oggettivo
+
+<p>È intimato per ragioni inerenti all’attività produttiva, all’organizzazione del lavoro e al regolare funzionamento di essa (esempio: soppressione del posto di lavoro, riassetto organizzativo).</p>
+
+<p>Il sindacato del giudice riguarda la sussistenza delle ragioni produttive e la effettività delle soluzioni organizzative del datore di lavoro, ma non può estendersi al merito e alla convenienza di tali soluzioni.</p>
+
+<p>Il licenziamento per le <u>assenze dovute a malattia</u> non rientra nella disciplina del licenziamento per giustificato motivo oggettivo: quando le assenze superano il periodo di conservazione del posto di lavoro previsto dai contratti collettivi (c.d. comporto), il datore può legittimamente licenziare.</p>

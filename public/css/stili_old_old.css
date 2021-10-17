@@ -1,0 +1,126 @@
+body{
+	background-color:#0058cf;
+
+}
+.head, .footer{
+	background-color:#fff;
+	/*background-image: url(../img/background_head.png) ;
+	background-repeat: repeat-x;*/
+}
+
+.footer{
+	margin:150px 0 0 0;
+}
+.footer .row div img{
+	height:40px;
+	margin:20px 20px 20px 0;
+}
+.footer .row div {
+	text-align:right;
+}
+
+.head .row div{
+	background-color:#fff;
+	padding:0;
+}
+
+.blue{
+	background-color:#0058cf;
+}
+
+.pollicino{
+	padding:.5rem 0 0 0;
+	color:#b9d5fa;
+}
+.pollicino a{
+	color:#fff;
+	text-decoration: underline;
+}
+a{
+	color:#fff;
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+	color:#fff;
+}
+.pollicino a:hover{
+	color:#fff;
+	text-decoration: none;
+}
+
+.tit_home, .tit_int{
+	color:#fff;
+	margin-top:3.5rem;
+	margin-bottom:2rem;
+}
+.tit_home{
+	text-align: center;
+        color:#fff;
+	margin-top:3.5rem;
+	margin-bottom:2rem;
+}
+h2 a, h3 a{
+	display:block;
+	text-align: center;
+	padding:3rem 0;
+	color:#333;
+	font-weight: normal;
+	border-radius: 10px;
+}
+h2 a:hover, h3 a:hover{
+	display:block;
+	text-decoration: none;
+	background-color: #023c8b;
+	color:#fff;
+}
+.headsx{
+
+}
+.headsx img{
+	margin:10px 0;
+	width:80%;
+}
+
+.headdx{
+	text-align: right;
+}
+.box{
+	background-color:#fff;
+	border-radius: 10px;
+	margin-top:.5rem;
+}
+.box2{
+	padding:2rem;
+}
+.elenco{
+	margin:0;
+	padding:0;
+}
+.elenco li{
+	margin:0;
+	padding:0 0 .3rem 0;
+	list-style-type: none;
+}
+.trib{
+	text-align:right;
+	margin:0;
+	padding-right:2rem;
+	color:#fff;
+}
+
+.tempop{
+	text-align:right;
+	margin:1rem 0 0 0;
+	padding-right:2rem;
+	color:#fff;
+}
+
+.testodesc{
+	color:#b4d3fd;
+	margin: 0 0 4rem 0;
+}
+
+.elenco li a{
+	
+}

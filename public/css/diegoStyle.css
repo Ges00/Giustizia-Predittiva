@@ -1,0 +1,18 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 14 ott 2021, 10:07:03
+    Author     : Diego
+*/
+
+.center {
+margin: auto;
+width: 60%;
+padding: 10px;
+}
+
+.item-white{
+   color:#fff;
+}
