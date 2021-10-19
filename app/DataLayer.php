@@ -89,14 +89,34 @@ class DataLayer {
     
     public function addSentenza($caso, $decisione, $massima, $provvedimento, $corte, $numero_data, $giudice) {
         $new_sentenza = new Sentenza;
+        echo "DEBUGGING ADD SENTENZA";
+        echo $corte;
         $new_sentenza->caso = $caso;
         $new_sentenza->decisione = $decisione;
         $new_sentenza->massima = $massima;
         $new_sentenza->provvedimento = $provvedimento;
         $new_sentenza->corte = $corte;
         $new_sentenza->numero_data= $numero_data;
-        $new_sentenza->giudice= $giudice; 
+        $new_sentenza->giudice= $giudice;
         $new_sentenza->save();
+    }
+    
+    
+    public function updateSentenza($caso, $decisione, $massima, $provvedimento, $corte, $numero_data, $giudice, $id){
+        $sentenza = $this->findSentenzaByID($id);
+        $sentenza->caso = $caso;
+        $sentenza->decisione = $decisione;
+        $sentenza->massima = $massima;
+        $sentenza->provvedimento = $provvedimento;
+        $sentenza->corte = $corte;
+        $sentenza->numero_data= $numero_data;
+        $sentenza->giudice= $giudice;
+        $sentenza->save();
+    }
+    
+    public function findPredictionsFromIdSentenza($id_sentenza){
+        $predizioni = DB::table('Predizione')->where('id_sentenza', $id_sentenza)->get();
+        return $predizioni;
     }
     
     public function findPredictions($id_categoria) {

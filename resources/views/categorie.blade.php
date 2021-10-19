@@ -23,6 +23,7 @@
     </svg>
     @endif
 </h1>
+
     
 @if($superCategory->dettagli != null)
 <div class="modal fade" id="confirmModal" role="dialog">

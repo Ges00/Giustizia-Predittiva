@@ -31,7 +31,11 @@ Auth::routes();
     Route::get('/categorie/{id_padre}', ['as' => 'categoryChildren',
         'uses' => 'CategoryController@children']);
     Route::resource('sentenza', 'SentenzaController');
-    //ROUTE PER L'AUTENTICAZIONE DELL'ADMIN CREATE DA DIEGO BERARDI
+    //Route::post('/sentenza', 'SentenzaController@store')->name('sentenza.store');
+    //Route::get('sentenza', ['as' => 'sentenza.confirmDestroy', 'uses' => 'SentenzaController@confirmDestroy']);
+    Route::get('/sentenza/{id}/destroy', ['as' => 'sentenza.destroy', 'uses' => 'SentenzaController@destroy']);
+    Route::get('/sentenza/{id}/destroy/confirm', ['as' => 'sentenza.destroy.confirm', 'uses' => 'SentenzaController@confirmDestroy']);    
+//ROUTE PER L'AUTENTICAZIONE DELL'ADMIN CREATE DA DIEGO BERARDI
     Route::get('user/login', ['as' => 'user.login', 'uses' => 'AuthController@authentication']); 
     Route::post('user/login', ['as' => 'user.login', 'uses' => 'AuthController@login']); 
     Route::get('user/logout', ['as' => 'user.logout', 'uses' => 'AuthController@logout']);

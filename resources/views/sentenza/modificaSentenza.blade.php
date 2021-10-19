@@ -3,7 +3,7 @@
 @section('corpo')
 <div class="row">
     <div class='col-md-12'>
-        <form class="form-horizontal" name="sentenza" method="POST" action="{{ route('sentenza.store')}}">
+        <form class="form-horizontal" name="sentenza" method="GET" action="{{ route('sentenza.update', ['id' => $id])}}">
             {{ csrf_field() }}
             <div class="form-group">
                 <!--<label for="fname">First name:</label><br>

@@ -30,7 +30,14 @@
             <h5 class="tribunale">{{ $sentenza->corte }}</h5>
             <h6>{{ $sentenza->numero_data }}</h6>
             <p>{{ $sentenza->giudice }}</p>
+            
         </div>
+        @if($logged)
+        <div class="col-md-12">
+            <a href="{{ route('sentenza.edit', ["id" => $sentenza->id]) }}" class="btn btn-primary btn-large btn-block">Edit</a>
+            <a href="{{ route('sentenza.destroy.confirm', ["id" => $sentenza->id])}}" class="btn btn-primary btn-large btn-block">Delete</a>
+        </div>
+        @endif
     </div>
 </div>
 @endsection
