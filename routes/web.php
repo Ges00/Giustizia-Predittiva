@@ -33,6 +33,7 @@ Auth::routes();
     Route::resource('sentenza', 'SentenzaController');
     //Route::post('/sentenza', 'SentenzaController@store')->name('sentenza.store');
     //Route::get('sentenza', ['as' => 'sentenza.confirmDestroy', 'uses' => 'SentenzaController@confirmDestroy']);
+    Route::get('/sentenza/{id}/update', ['as' => 'sentenza.update', 'uses' => 'SentenzaController@update']);
     Route::get('/sentenza/{id}/destroy', ['as' => 'sentenza.destroy', 'uses' => 'SentenzaController@destroy']);
     Route::get('/sentenza/{id}/destroy/confirm', ['as' => 'sentenza.destroy.confirm', 'uses' => 'SentenzaController@confirmDestroy']);    
 //ROUTE PER L'AUTENTICAZIONE DELL'ADMIN CREATE DA DIEGO BERARDI

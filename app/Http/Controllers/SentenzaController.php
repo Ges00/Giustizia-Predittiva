@@ -41,7 +41,7 @@ class SentenzaController extends Controller {
             if ($breadcrumb == null) {
                 return view('errors.categoriaNonValida')->with('idCategoria', $request->input('cat'));
             }
-            if (isset($_SESSION['logged'])){
+            if (isset($_SESSION['logged'])) {
                 return view('sentenza.sentenza')->with('sentenza', $sentenza)->with('breadcrumb', $breadcrumb)->with('logged', $_SESSION['logged'])->with('id_cat', $id);
             }
             return view('sentenza.sentenza')->with('sentenza', $sentenza)->with('breadcrumb', $breadcrumb)->with('logged', false);
@@ -54,28 +54,30 @@ class SentenzaController extends Controller {
 
     public function update(Request $request, $id) {
         $dl = new DataLayer();
-        echo "updating sentenza";
-        exit();
-
         $dl->updateSentenza($request->input("caso"), $request->input("decisione"),
                 $request->input("massima"), $request->input("provvedimento"),
                 $request->input("corte"), $request->input("numero_data"), $request->input("giudice"), $id);
-   
+
         return Redirect::to(route('home'));
     }
 
     public function destroy($id) {
+        $dl = new DataLayer();
+        //echo "destroying sentenza: ";
+        //echo $id;
+        //echo $predizioni;
+        //exit();
+        $dl->deleteSentenza($id);
         return Redirect::to(route('home'));
     }
-    
-    public function confirmDestroy($id){
+
+    public function confirmDestroy($id) {
         $dl = new DataLayer();
-        echo "confirm destroy sentenza";
-        echo $id;
-        //exit();
+
         $sentenza = $dl->findSentenzaByID($id);
         $predizioni = $dl->findPredictionsFromIdSentenza($id);
-        return view('sentenza.deleteSentenza')->with('id_sentenza', $id)->with('numero_data', $sentenza->input("numero_data"))->with('predizioni', $predizioni);
+        // il problema è questo return, ovvero il modo in cui viene ritornata la view
+        return view('sentenza.deleteSentenza')->with('id_sentenza', $id)->with('numero_data', $sentenza->numero_data)->with('predizioni', $predizioni);
     }
 
 }

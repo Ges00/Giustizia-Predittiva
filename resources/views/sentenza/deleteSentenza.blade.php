@@ -7,8 +7,11 @@
         <div class="col-md-12">
             <header>
                 <h1>
-                    Delete sentenza "{{ $sentenza->numero_data }}" from the database
+                    Delete sentenza "{{ $numero_data }}" and the associated predictions:
                 </h1>
+                @foreach($predizioni as $pred)
+                <p>"{{$pred->id}}"</p>
+                @endforeach
             </header>
             <p class='lead'>
                 Deleting sentenza. Confirm?
@@ -26,7 +29,7 @@
                 </div>
                 <div class='panel-body'>
                     <p>The sentenza <strong>will not be removed</strong> from the data base</p>
-                    <p><a class="btn btn-default" href="{{ route('sentenza.show') }}"><span class='glyphicon glyphicon-log-out'></span> Back to sentenza</a></p>
+                    <p><a class="btn btn-light" href="{{ route('home') }}"><span class='glyphicon glyphicon-log-out'></span> Back to sentenza</a></p>
                 </div>
             </div>
         </div>
@@ -37,12 +40,8 @@
                     Confirm
                 </div>
                 <div class='panel-body'>
-                    <p>The sentenza and all the following predictions <strong>will be permanently removed</strong> from the data base</p>
-                    @foreach($predizioni as $pred)
-                    <a>
-                        id: $pred->id
-                    </a>
-                    <p><a class="btn btn-danger" href="{{ route('sentenza.destroy', ['id' => $sentenza->id, 'predizioni' => $predizioni] ) }}"><span class='glyphicon glyphicon-trash'></span> Delete</a></p>
+                    <p>The sentenza and all the associated predictions <strong>will be permanently removed</strong> from the data base</p>
+                    <p><a class="btn btn-danger" href="{{ route('sentenza.destroy', ['id' => $id_sentenza]) }}"><span class='glyphicon glyphicon-trash'></span> Delete</a></p>
                 </div>
             </div>
         </div>

@@ -2,8 +2,9 @@
 
 @section('corpo')
 <div class="row">
+    
     <div class='col-md-12'>
-        <form class="form-horizontal" name="sentenza" method="GET" action="{{ route('sentenza.update', ['id' => $id])}}">
+        <form class="form-horizontal" name="sentenzaUpdate" method="GET" action="{{ route('sentenza.update', ['id' => $id])}}">
             {{ csrf_field() }}
             <div class="form-group">
                 <!--<label for="fname">First name:</label><br>
@@ -39,7 +40,7 @@
                 <div class="col-sm-10">
                     <input class="form-control" type="text" id="provvedimento" name="provvedimento" placeholder="provvedimento">
                 </div>
-                <label for="mySubmit" class="btn btn-primary btn-large btn-block"><span class="glyphicon glyphicon-floppy-save"></span> Create</label>
+                <label for="mySubmit" class="btn btn-primary btn-large btn-block"><span class="glyphicon glyphicon-floppy-save"></span> Edit</label>
                 <input id="mySubmit" type="submit" class="hidden"/>
             </div>
         </form>
