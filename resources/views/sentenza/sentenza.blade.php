@@ -6,6 +6,7 @@
     > <a href="{{ route('categoryChildren',[$item->id]) }}">{{ $item->nome }}</a>
     @endforeach
 </p>
+
 <div class="row">
     <div class="col-md-12">
         <p class="trib">{{ $sentenza->corte }}</p>
@@ -30,7 +31,7 @@
             <h5 class="tribunale">{{ $sentenza->corte }}</h5>
             <h6>{{ $sentenza->numero_data }}</h6>
             <p>{{ $sentenza->giudice }}</p>
-            
+
         </div>
         @if($logged)
         <div class="col-md-12">
@@ -39,5 +40,7 @@
         </div>
         @endif
     </div>
+
+
 </div>
 @endsection

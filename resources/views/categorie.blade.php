@@ -2,9 +2,9 @@
 
 
 @section('loginlogout')
-    @if($logged)
-        <a><i class="pollicino"> Logged in as admin: {{ $loggedName }}</i></a></li>
-    @endif
+@if($logged)
+<a><i class="pollicino"> Logged in as admin: {{ $loggedName }}</i></a></li>
+@endif
 @endsection
 
 @section('corpo')
@@ -24,7 +24,14 @@
     @endif
 </h1>
 
-    
+@if($logged)
+<p><a class="btn btn-light" href="{{ route('categoria.create', ['id' => $superCategory->id]) }}">New Category</a></p>
+
+<p><a class="btn btn-danger" href="{{ route('categoria.destroy.confirm', ['id' => $superCategory->id]) }}">Delete Category</a></p>
+
+<p><a class="btn btn-primary" href="{{ route('predizione.create', ['id' => $superCategory->id]) }}">New Prediction</a></p>
+@endif
+
 @if($superCategory->dettagli != null)
 <div class="modal fade" id="confirmModal" role="dialog">
     <div class="modal-dialog">
@@ -60,9 +67,13 @@
             <!--<p>{{ $pred->se_allora }}</p>-->
             <p><?php echo $pred->se_allora ?></p>
             <p><a class="btn btn-default" href="{{ route('sentenza.show', ['sentenza' => $pred->id_sentenza, 'cat' => $superCategory->id]) }}"><img src="{{ url('/') }}/img/img_550706.png" width="20"/> Vai al caso</a></p>
+            @if($logged)
+            <p><a class="btn btn-danger" href="{{ route('predizione.destroy.confirm', ['id' => $pred->id]) }}">Delete prediction</a></p>
+            @endif
         </div>
         @endforeach 
     </div>
+
     @else
     <div class="col-md-12 col-sm-12 col-12">
         <ul class="elenco">
@@ -79,11 +90,11 @@
             <p><?php echo $pred->se_allora ?></p>
             <p><a class="btn martello" href="{{ route('sentenza.show', ['sentenza' => $pred->id_sentenza, 'cat' => $superCategory->id]) }}"><img src="{{ url('/') }}/img/martello.png" width="20"/> Vai al caso</a></p>
             @if($logged)
-                <p><a class="btn martello" href="{{ route('sentenza.edit', ['sentenza' => $pred->id_sentenza, 'cat' => $superCategory->id]) }}"><img src="{{ url('/') }}/img/move_sentenza.png" width="50"/>Sposta sentenza</a></p>            
+            <p><a class="btn btn-danger" href="{{ route('predizione.destroy.confirm', ['id' => $pred->id]) }}">Delete prediction</a></p>
             @endif
         </div>
         @endforeach
-        
+
     </div>
     @endif
 

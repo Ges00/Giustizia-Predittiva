@@ -62,6 +62,10 @@ class DataLayer {
         return Sentenza::find($id);
     }
 
+    public function findCategoriesFromIdPadre($id) {
+        return DB::table('Categoria')->where('id_categoria_padre', $id)->get();
+    }
+
     public function keywordFound($parola) {
         $keywords = DB::table('Keyword')->where('nome_codificato', $this->pulisciStringa($parola))->get();
         if (count($keywords) > 0) {
@@ -98,15 +102,47 @@ class DataLayer {
         $new_sentenza->save();
     }
 
+    public function addCategoria($nome, $dettagli, $id_padre) {
+        $new_categoria = new Categoria;
+        $new_categoria->nome = $nome;
+        $new_categoria->dettagli = $dettagli;
+        $new_categoria->id_categoria_padre = $id_padre;
+        $new_categoria->save();
+    }
+    
+    public function addPredizione($se_allora, $id_sentenza, $id_padre){
+        $new_predizione = new Predizione;
+        $new_predizione->se_allora = $se_allora;
+        $new_predizione->id_sentenza = $id_sentenza;
+        $new_predizione->id_categoria = $id_padre;
+        $new_predizione->save();
+    }
+
     public function updateSentenza($caso, $decisione, $massima, $provvedimento, $corte, $numero_data, $giudice, $id) {
         $sentenza = $this->findSentenzaByID($id);
-        $sentenza->caso = $caso;
-        $sentenza->decisione = $decisione;
-        $sentenza->massima = $massima;
-        $sentenza->provvedimento = $provvedimento;
-        $sentenza->corte = $corte;
-        $sentenza->numero_data = $numero_data;
-        $sentenza->giudice = $giudice;
+        if ($caso != null)
+        //echo $sentenza->caso ;
+            $sentenza->caso = $caso;
+        if ($decisione != null)
+        //echo "decisione";
+            $sentenza->decisione = $decisione;
+        if ($massima != null)
+        //echo"massima";
+            $sentenza->massima = $massima;
+        if ($provvedimento != null)
+        //echo"provv";
+            $sentenza->provvedimento = $provvedimento;
+        if ($corte != null)
+        //echo "corte";
+            $sentenza->corte = $corte;
+        if ($numero_data != null)
+        //echo("numero data");
+            $sentenza->numero_data = $numero_data;
+        if ($giudice != null)
+        //echo("sentenza");
+            $sentenza->giudice = $giudice;
+        //echo "updating";
+        //exit();
         $sentenza->save();
     }
 
@@ -118,7 +154,36 @@ class DataLayer {
         }
         Sentenza::find($id)->delete();
     }
+    
+    /*
+    public function deleteCategoria($id) {
+        echo "deleting categories";
+        $categorie_figlie = $this->findCategoriesFromIdPadre($id);
+        foreach ($categorie_figlie as $cat) {
+            Predizione::findOrFail($cat->id)->delete();
+            Categoria::find($cat->id)->delete();
+        }
+        Categoria::find($id)->delete();
+    }*/
 
+    public function deleteCategorieRecursive($id) {
+        $categorie_figlie = $this->findCategoriesFromIdPadre($id);
+        // AGGIUNGERE ELIMINAZIONE PREDIZIONI ASSOCIATE ALLE CATEGORIE
+        if ($categorie_figlie != null) {
+            foreach ($categorie_figlie as $cat) {
+                //Predizione::findOrFail($cat->id)->delete();
+                $this->deleteCategorieRecursive($cat->id);
+            }
+        }
+        Predizione::where('id_categoria', $id)->delete();
+        Categoria::find($id)->delete();
+        return;
+    }
+
+    public function deletePredizione($id){
+        Predizione::find($id)->delete();
+    }
+    
     public function findPredictionsFromIdSentenza($id_sentenza) {
         $predizioni = DB::table('Predizione')->where('id_sentenza', $id_sentenza)->get();
         return $predizioni;
@@ -127,6 +192,15 @@ class DataLayer {
     public function findPredictions($id_categoria) {
         $predizioni = DB::table('Predizione')->where('id_categoria', $id_categoria)->get();
         return $predizioni;
+    }
+    
+    public function findPredictionFromId($id_predizione){
+        $predizione = DB::table('Predizione')->where('id', $id_predizione)->get();
+        return $predizione;
+    }
+    
+    public function getAllSentenze(){
+        return DB::table('Sentenza')->get();
     }
 
     private function pulisciStringa($stringa) {

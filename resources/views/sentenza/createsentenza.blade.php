@@ -1,8 +1,20 @@
 @extends('layouts.master_protected')
 
+
 @section('corpo')
+<p class="pollicino"><a href="{{ route('home') }}">Home</a></p>
+
 <div class="row">
     <div class='col-md-12'>
+        @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
         <form class="form-horizontal" name="sentenza" method="POST" action="{{ route('sentenza.store')}}">
             {{ csrf_field() }}
             <div class="form-group">
@@ -45,3 +57,4 @@
         </form>
     </div>
 </div>
+@endsection

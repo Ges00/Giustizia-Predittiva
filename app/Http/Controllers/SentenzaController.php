@@ -18,9 +18,19 @@ class SentenzaController extends Controller {
 
     public function store(Request $request) {
         $dl = new DataLayer();
-        echo "DEBUGGING SENTENZA STORE";
-        echo $request->input("caso");
+        //echo "DEBUGGING SENTENZA STORE";
+        //echo $request->input("caso");
         //exit();
+
+        $request->validate([
+            'caso' => 'required',
+            'decisione' => 'required',
+            'massima' => 'required',
+            'provvedimento' => 'required',
+            'corte' => 'required',
+            'numero_data' => 'required',
+            'giudice' => 'required',
+        ]);
         $dl->addSentenza($request->input("caso"), $request->input("decisione"),
                 $request->input("massima"), $request->input("provvedimento"),
                 $request->input("corte"), $request->input("numero_data"), $request->input("giudice"));

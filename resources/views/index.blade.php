@@ -2,16 +2,16 @@
 
 @section('loginlogout')
     @if($logged)
-    <ul class="navbar-nav navbar-right">
-      <li class="nav-item">
-          <a class="nav-link" href="{{ route('user.logout') }}"> Log out <span class="glyphicon glyphicon-log-out"></span></a>
+    <ul class="navbar-nav" >
+      <li class="nav-item" >
+          <a class="nav-link btn btn-light" href="{{ route('user.logout') }}"> Log out <span class="glyphicon glyphicon-log-out"></span></a>
       </li>
-      <li class="nav-item">
-          <a class="nav-link" href="{{ route('sentenza.create') }}"> Nuova Sentenza<span class="glyphicon glyphicon-log-out"></span></a>
+      <li class="nav-item" >
+          <a class="nav-link btn btn-light" href="{{ route('sentenza.create') }}"> Nuova Sentenza<span class="glyphicon glyphicon-log-out"></span></a>
       </li>
     </ul>
     @else
-    <ul class="navbar-nav">
+    <ul class="navbar-nav btn btn-light">
         <li class="nav-itm"><a class="nav-link" href="{{ route('user.login') }}"><span class="glyphicon glyphicon-user"></span> Log in</a></li>
     </ul>
     @endif

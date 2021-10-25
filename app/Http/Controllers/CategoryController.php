@@ -2,11 +2,65 @@
 
 namespace giustiziapredittiva\Http\Controllers;
 
-//use Illuminate\Http\Request;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 use giustiziapredittiva\DataLayer;
 
 class CategoryController extends Controller {
 
+    public function index(){
+        return "index category";
+    }
+    
+    public function create(Request $request){
+        return view("categoria.createCategoria")->with('id_padre', $request->input("id"));
+    }
+    
+    public function store(Request $request){
+        $dl = new DataLayer();
+        echo "DEBUGGING CATEGORIA STORE";
+        echo $request->input('id_padre');
+
+        $request->validate([
+            'nome' => 'required',
+        ]);
+        $dl->addCategoria($request->input("nome"), $request->input("dettagli"), $request->input("id_padre"));
+        return Redirect::to(route('home'));
+    }
+    
+    public function show(){
+        return "show category";
+    }
+    
+    public function edit($id){
+        return "edit category";
+    }
+    
+    public function update(Request $request, $id){
+        return "update category";
+    }
+    
+    public function destroy($id){
+        $dl = new DataLayer();
+        //echo "destroying sentenza: ";
+        //echo $id;
+        //echo $predizioni;
+        //exit();
+        $dl->deleteCategorieRecursive($id);
+        return Redirect::to(route('home'));
+    }
+    
+    public function confirmDestroy($id){
+    
+        $dl = new DataLayer();
+
+        $categoria = $dl->findCategoryByID($id);
+        $categorie_figlie = $dl->findCategoriesFromIdPadre($id);
+        // il problema è questo return, ovvero il modo in cui viene ritornata la view
+        return view('categoria.deleteCategoria')->with('nome', $categoria->nome)->with('id_categoria', $id)->with('categorie_figlie', $categorie_figlie);
+    
+    }
+    
     public function children($id) {
         session_start();
         $dl = new DataLayer();
