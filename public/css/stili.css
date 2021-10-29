@@ -68,6 +68,13 @@ a:hover{
 .tit_home{
 	text-align: center;
 }
+
+.btn-margin-left {
+    margin-left: 2px;
+}
+.btn-margin-right {
+    margin-right: 2px;
+}
 {
 	color:#fff;
 	margin-top:3.5rem;
@@ -121,6 +128,13 @@ h2 a:hover, h3 a:hover{
 }
 .trib{
 	text-align:right;
+	margin:0;
+	padding-right:2rem;
+	color:#fff;
+}
+
+.tribleft{
+	text-align:left;
 	margin:0;
 	padding-right:2rem;
 	color:#fff;

@@ -23,10 +23,10 @@ class SentenzaController extends Controller {
         //exit();
 
         $request->validate([
-            'caso' => 'required',
-            'decisione' => 'required',
-            'massima' => 'required',
-            'provvedimento' => 'required',
+            //'caso' => 'required',
+            //'decisione' => 'required',
+            //'massima' => 'required',
+            //'provvedimento' => 'required',
             'corte' => 'required',
             'numero_data' => 'required',
             'giudice' => 'required',
@@ -52,42 +52,42 @@ class SentenzaController extends Controller {
                 return view('errors.categoriaNonValida')->with('idCategoria', $request->input('cat'));
             }
             if (isset($_SESSION['logged'])) {
-                return view('sentenza.sentenza')->with('sentenza', $sentenza)->with('breadcrumb', $breadcrumb)->with('logged', $_SESSION['logged'])->with('id_cat', $id);
+                return view('sentenza.sentenza')->with('sentenza', $sentenza)->with('breadcrumb', $breadcrumb)->with('logged', $_SESSION['logged'])->with('id_cat', $id)->with('id_padre', $request->input("cat"));
             }
             return view('sentenza.sentenza')->with('sentenza', $sentenza)->with('breadcrumb', $breadcrumb)->with('logged', false);
         }
     }
 
-    public function edit($id) {
-        return view('sentenza.modificaSentenza')->with('id', $id);
+    public function edit($id, $id_padre) {
+        return view('sentenza.modificaSentenza')->with('id', $id)->with('id_padre', $id_padre);
     }
 
-    public function update(Request $request, $id) {
+    public function update(Request $request, $id, $id_padre) {
         $dl = new DataLayer();
         $dl->updateSentenza($request->input("caso"), $request->input("decisione"),
                 $request->input("massima"), $request->input("provvedimento"),
                 $request->input("corte"), $request->input("numero_data"), $request->input("giudice"), $id);
 
-        return Redirect::to(route('home'));
+        return Redirect::to(route('categoryChildren',$id_padre));
     }
 
-    public function destroy($id) {
+    public function destroy($id, $id_padre) {
         $dl = new DataLayer();
         //echo "destroying sentenza: ";
         //echo $id;
         //echo $predizioni;
         //exit();
         $dl->deleteSentenza($id);
-        return Redirect::to(route('home'));
+        return Redirect::to(route('categoryChildren',$id_padre));
     }
 
-    public function confirmDestroy($id) {
+    public function confirmDestroy($id, $id_padre) {
         $dl = new DataLayer();
 
         $sentenza = $dl->findSentenzaByID($id);
         $predizioni = $dl->findPredictionsFromIdSentenza($id);
         // il problema è questo return, ovvero il modo in cui viene ritornata la view
-        return view('sentenza.deleteSentenza')->with('id_sentenza', $id)->with('numero_data', $sentenza->numero_data)->with('predizioni', $predizioni);
+        return view('sentenza.deleteSentenza')->with('id_padre', $id_padre)->with('id_sentenza', $id)->with('numero_data', $sentenza->numero_data)->with('predizioni', $predizioni);
     }
 
 }

@@ -29,7 +29,7 @@
                 </div>
                 <div class='panel-body'>
                     <p>The categoria <strong>will not be removed</strong> from the data base</p>
-                    <p><a class="btn btn-light" href="{{ route('home') }}"><span class='glyphicon glyphicon-log-out'></span> Back to home</a></p>
+                    <p><a class="btn btn-light" href="{{ route('categoryChildren', $id_categoria) }}"><span class='glyphicon glyphicon-log-out'></span> Torna a Categoria</a></p>
                 </div>
             </div>
         </div>
@@ -41,7 +41,7 @@
                 </div>
                 <div class='panel-body'>
                     <p>The categoria and all the associated predictions and subcategories <strong>will be permanently removed</strong> from the data base</p>
-                    <p><a class="btn btn-danger" href="{{ route('categoria.destroy', ['id' => $id_categoria]) }}"><span class='glyphicon glyphicon-trash'></span> Delete</a></p>
+                    <p><a class="btn btn-danger" href="{{ route('categoria.destroy', ['id' => $id_categoria]) }}"><span class='glyphicon glyphicon-trash'></span> Cancella</a></p>
                 </div>
             </div>
         </div>

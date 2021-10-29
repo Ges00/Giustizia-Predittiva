@@ -18,14 +18,11 @@ class CategoryController extends Controller {
     
     public function store(Request $request){
         $dl = new DataLayer();
-        echo "DEBUGGING CATEGORIA STORE";
-        echo $request->input('id_padre');
-
         $request->validate([
             'nome' => 'required',
         ]);
         $dl->addCategoria($request->input("nome"), $request->input("dettagli"), $request->input("id_padre"));
-        return Redirect::to(route('home'));
+        return Redirect::to(route('categoryChildren', $request->input('id_padre')));
     }
     
     public function show(){
@@ -57,7 +54,8 @@ class CategoryController extends Controller {
         $categoria = $dl->findCategoryByID($id);
         $categorie_figlie = $dl->findCategoriesFromIdPadre($id);
         // il problema è questo return, ovvero il modo in cui viene ritornata la view
-        return view('categoria.deleteCategoria')->with('nome', $categoria->nome)->with('id_categoria', $id)->with('categorie_figlie', $categorie_figlie);
+        return view('categoria.deleteCategoria')->with('nome', $categoria->nome)
+                ->with('id_categoria', $id)->with('categorie_figlie', $categorie_figlie);
     
     }
     

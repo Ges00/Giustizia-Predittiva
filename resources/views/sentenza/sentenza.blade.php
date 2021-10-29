@@ -8,6 +8,7 @@
 </p>
 
 <div class="row">
+
     <div class="col-md-12">
         <p class="trib">{{ $sentenza->corte }}</p>
         <div class="box box2">
@@ -35,8 +36,8 @@
         </div>
         @if($logged)
         <div class="col-md-12">
-            <a href="{{ route('sentenza.edit', ["id" => $sentenza->id]) }}" class="btn btn-primary btn-large btn-block">Edit</a>
-            <a href="{{ route('sentenza.destroy.confirm', ["id" => $sentenza->id])}}" class="btn btn-primary btn-large btn-block">Delete</a>
+            <a href="{{ route('sentenza.edit', ["id" => $sentenza->id, 'id_padre' => $id_padre]) }}" class="btn btn-light">Edit</a>
+            <a href="{{ route('sentenza.destroy.confirm', ["id" => $sentenza->id, 'id_padre' => $id_padre])}}" class="btn btn-danger">Delete</a>
         </div>
         @endif
     </div>

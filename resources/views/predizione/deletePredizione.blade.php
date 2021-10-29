@@ -26,7 +26,7 @@
                 </div>
                 <div class='panel-body'>
                     <p>The predizione <strong>will not be removed</strong> from the data base</p>
-                    <p><a class="btn btn-light" href="{{ route('home') }}"><span class='glyphicon glyphicon-log-out'></span> Back to home</a></p>
+                    <p><a class="btn btn-light" href="{{ route('categoryChildren', $id_padre) }}"><span class='glyphicon glyphicon-log-out'></span> Torna a Categoria</a></p>
                 </div>
             </div>
         </div>
@@ -38,7 +38,7 @@
                 </div>
                 <div class='panel-body'>
                     <p>The predizione <strong>will be permanently removed</strong> from the data base</p>
-                    <p><a class="btn btn-danger" href="{{ route('predizione.destroy', ['id' => $id_pred]) }}"><span class='glyphicon glyphicon-trash'></span> Delete</a></p>
+                    <p><a class="btn btn-danger" href="{{ route('predizione.destroy', ['id' => $id_pred, 'id_padre' => $id_padre]) }}"><span class='glyphicon glyphicon-trash'></span> Elimina</a></p>
                 </div>
             </div>
         </div>

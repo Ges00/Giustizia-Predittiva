@@ -33,9 +33,10 @@ Auth::routes();
     Route::resource('sentenza', 'SentenzaController');
     //Route::post('/sentenza', 'SentenzaController@store')->name('sentenza.store');
     //Route::get('sentenza', ['as' => 'sentenza.confirmDestroy', 'uses' => 'SentenzaController@confirmDestroy']);
-    Route::get('/sentenza/{id}/update', ['as' => 'sentenza.update', 'uses' => 'SentenzaController@update']);
-    Route::get('/sentenza/{id}/destroy', ['as' => 'sentenza.destroy', 'uses' => 'SentenzaController@destroy']);
-    Route::get('/sentenza/{id}/destroy/confirm', ['as' => 'sentenza.destroy.confirm', 'uses' => 'SentenzaController@confirmDestroy']);    
+    Route::get('/sentenza/{id}/{id_padre}/edit', ['as' => 'sentenza.edit', 'uses' => 'SentenzaController@edit']);
+    Route::get('/sentenza/{id}/{id_padre}/update', ['as' => 'sentenza.update', 'uses' => 'SentenzaController@update']);
+    Route::get('/sentenza/{id}/{id_padre}/destroy', ['as' => 'sentenza.destroy', 'uses' => 'SentenzaController@destroy']);
+    Route::get('/sentenza/{id}/{id_padre}/destroy/confirm', ['as' => 'sentenza.destroy.confirm', 'uses' => 'SentenzaController@confirmDestroy']);    
     
     // route gestione categorie
     Route::resource('categoria', 'CategoryController');
@@ -44,8 +45,8 @@ Auth::routes();
 
     // route gestione predizioni
     Route::resource('predizione', 'PredizioneController');
-    Route::get('/predizione/{id}/destroy', ['as' => 'predizione.destroy', 'uses' => 'predizioneController@destroy']);
-    Route::get('/predizione/{id}/destroy/confirm', ['as' => 'predizione.destroy.confirm', 'uses' => 'predizioneController@confirmDestroy']);       
+    Route::get('/predizione/{id}/{id_padre}/destroy', ['as' => 'predizione.destroy', 'uses' => 'predizioneController@destroy']);
+    Route::get('/predizione/{id}/{id_padre}/destroy/confirm', ['as' => 'predizione.destroy.confirm', 'uses' => 'predizioneController@confirmDestroy']);       
 
 //ROUTE PER L'AUTENTICAZIONE DELL'ADMIN CREATE DA DIEGO BERARDI
     Route::get('user/login', ['as' => 'user.login', 'uses' => 'AuthController@authentication']); 

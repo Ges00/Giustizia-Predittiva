@@ -14,6 +14,24 @@
     @endforeach
 </p>
 
+@if($logged)
+<nav class="navbar navbar-expand-lg navbar-light    ">
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav" >
+            <li class="nav-item" >
+                <a class="btn btn-light btn-margin-left btn-margin-right" href="{{ route('categoria.create', ['id' => $superCategory->id]) }}">New Category</a>
+            </li>
+            <li class="nav-item" >
+                <a class="btn btn-light btn-margin-left btn-margin-right" href="{{ route('predizione.create', ['id' => $superCategory->id]) }}">New Prediction</a>
+            </li>
+            <li class="nav-item" >
+                <a class="btn btn-danger btn-margin-left btn-margin-right" href="{{ route('categoria.destroy.confirm', ['id' => $superCategory->id]) }}">Delete Category</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+@endif
+
 <h1 class="tit_int">{{ $superCategory->nome }}
     @if($superCategory->dettagli != null)
     <svg data-toggle="modal" data-target="#confirmModal" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -23,14 +41,6 @@
     </svg>
     @endif
 </h1>
-
-@if($logged)
-<p><a class="btn btn-light" href="{{ route('categoria.create', ['id' => $superCategory->id]) }}">New Category</a></p>
-
-<p><a class="btn btn-danger" href="{{ route('categoria.destroy.confirm', ['id' => $superCategory->id]) }}">Delete Category</a></p>
-
-<p><a class="btn btn-primary" href="{{ route('predizione.create', ['id' => $superCategory->id]) }}">New Prediction</a></p>
-@endif
 
 @if($superCategory->dettagli != null)
 <div class="modal fade" id="confirmModal" role="dialog">
@@ -68,7 +78,7 @@
             <p><?php echo $pred->se_allora ?></p>
             <p><a class="btn btn-default" href="{{ route('sentenza.show', ['sentenza' => $pred->id_sentenza, 'cat' => $superCategory->id]) }}"><img src="{{ url('/') }}/img/img_550706.png" width="20"/> Vai al caso</a></p>
             @if($logged)
-            <p><a class="btn btn-danger" href="{{ route('predizione.destroy.confirm', ['id' => $pred->id]) }}">Delete prediction</a></p>
+            <p><a class="btn btn-danger" href="{{ route('predizione.destroy.confirm', ['id' => $pred->id, 'id_padre'=> $superCategory->id]) }}">Delete Prediction</a></p>
             @endif
         </div>
         @endforeach 
@@ -90,7 +100,7 @@
             <p><?php echo $pred->se_allora ?></p>
             <p><a class="btn martello" href="{{ route('sentenza.show', ['sentenza' => $pred->id_sentenza, 'cat' => $superCategory->id]) }}"><img src="{{ url('/') }}/img/martello.png" width="20"/> Vai al caso</a></p>
             @if($logged)
-            <p><a class="btn btn-danger" href="{{ route('predizione.destroy.confirm', ['id' => $pred->id]) }}">Delete prediction</a></p>
+            <p><a class="btn btn-danger" href="{{ route('predizione.destroy.confirm', ['id' => $pred->id, 'id_padre'=> $superCategory->id]) }}">Delete prediction</a></p>
             @endif
         </div>
         @endforeach

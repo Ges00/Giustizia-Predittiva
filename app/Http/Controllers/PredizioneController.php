@@ -39,15 +39,12 @@ class PredizioneController extends Controller
     public function store(Request $request)
     {
         $dl = new DataLayer();
-        echo "DEBUGGING CATEGORIA STORE";
-        echo $request->input('id_padre');
-
         $request->validate([
             'se_allora' => 'required',
             'id_sentenza' => 'required',
         ]);
         $dl->addPredizione($request->input("se_allora"), $request->input("id_sentenza"), $request->input("id_padre"));
-        return Redirect::to(route('home'));
+        return Redirect::to(route('categoryChildren', $request->input('id_padre')));
     }
 
     /**
@@ -90,16 +87,16 @@ class PredizioneController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id, $id_padre)
     {
         $dl = new DataLayer();
         $dl->deletePredizione($id);
-        return Redirect::to(route('home'));
+        return Redirect::to(route('categoryChildren', $id_padre));
     }
     
-    public function confirmDestroy($id){   
+    public function confirmDestroy($id, $id_padre){   
         //$dl = new DataLayer();
         //$predizione = $dl->findPredictionFromId($id);
-        return view('predizione.deletePredizione')->with('id_pred', $id);
+        return view('predizione.deletePredizione')->with('id_pred', $id)->with('id_padre', $id_padre);
     }
 }

@@ -90,8 +90,6 @@ class DataLayer {
 
     public function addSentenza($caso, $decisione, $massima, $provvedimento, $corte, $numero_data, $giudice) {
         $new_sentenza = new Sentenza;
-        echo "DEBUGGING ADD SENTENZA";
-        echo $corte;
         $new_sentenza->caso = $caso;
         $new_sentenza->decisione = $decisione;
         $new_sentenza->massima = $massima;
