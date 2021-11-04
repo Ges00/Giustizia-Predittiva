@@ -53,9 +53,11 @@ class CategoryController extends Controller {
 
         $categoria = $dl->findCategoryByID($id);
         $categorie_figlie = $dl->findCategoriesFromIdPadre($id);
+        $predizioni = $dl ->findPredictions($id);
+        // $predizioni = $dl->findPredictionFromIdCatRecursive($id);
         // il problema è questo return, ovvero il modo in cui viene ritornata la view
         return view('categoria.deleteCategoria')->with('nome', $categoria->nome)
-                ->with('id_categoria', $id)->with('categorie_figlie', $categorie_figlie);
+                ->with('id_categoria', $id)->with('categorie_figlie', $categorie_figlie)->with('predizioni', $predizioni);
     
     }
     

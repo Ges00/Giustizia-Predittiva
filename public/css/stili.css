@@ -75,6 +75,18 @@ a:hover{
 .btn-margin-right {
     margin-right: 2px;
 }
+
+.confirm-delete{
+	margin-top:20px;
+	padding-right:2rem;
+	color:#fff;
+}
+
+.log-in-nav{
+    margin-top:25px; 
+    margin-bottom: -30px
+}
+
 {
 	color:#fff;
 	margin-top:3.5rem;

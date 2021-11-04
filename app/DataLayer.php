@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\DB;
 use giustiziapredittiva\Categoria;
 use giustiziapredittiva\Sentenza;
 use giustiziapredittiva\Keyword;
+use Tree\Node\Node;
 
 class DataLayer {
 
@@ -107,8 +108,8 @@ class DataLayer {
         $new_categoria->id_categoria_padre = $id_padre;
         $new_categoria->save();
     }
-    
-    public function addPredizione($se_allora, $id_sentenza, $id_padre){
+
+    public function addPredizione($se_allora, $id_sentenza, $id_padre) {
         $new_predizione = new Predizione;
         $new_predizione->se_allora = $se_allora;
         $new_predizione->id_sentenza = $id_sentenza;
@@ -144,6 +145,14 @@ class DataLayer {
         $sentenza->save();
     }
 
+    public function updatePredizione($se_allora, $id) {
+        $predizione = $this->findPredictionById($id);
+        if ($se_allora != null)
+        //echo $sentenza->caso ;
+            $predizione->se_allora = $se_allora;
+        $predizione->save();
+    }
+
     public function deleteSentenza($id) {
         $predizioni = $this->findPredictionsFromIdSentenza($id);
         DB::table('Keyword_sentenza')->where('sentenza_id', $id)->delete();
@@ -152,17 +161,17 @@ class DataLayer {
         }
         Sentenza::find($id)->delete();
     }
-    
+
     /*
-    public function deleteCategoria($id) {
-        echo "deleting categories";
-        $categorie_figlie = $this->findCategoriesFromIdPadre($id);
-        foreach ($categorie_figlie as $cat) {
-            Predizione::findOrFail($cat->id)->delete();
-            Categoria::find($cat->id)->delete();
-        }
-        Categoria::find($id)->delete();
-    }*/
+      public function deleteCategoria($id) {
+      echo "deleting categories";
+      $categorie_figlie = $this->findCategoriesFromIdPadre($id);
+      foreach ($categorie_figlie as $cat) {
+      Predizione::findOrFail($cat->id)->delete();
+      Categoria::find($cat->id)->delete();
+      }
+      Categoria::find($id)->delete();
+      } */
 
     public function deleteCategorieRecursive($id) {
         $categorie_figlie = $this->findCategoriesFromIdPadre($id);
@@ -178,10 +187,10 @@ class DataLayer {
         return;
     }
 
-    public function deletePredizione($id){
+    public function deletePredizione($id) {
         Predizione::find($id)->delete();
     }
-    
+
     public function findPredictionsFromIdSentenza($id_sentenza) {
         $predizioni = DB::table('Predizione')->where('id_sentenza', $id_sentenza)->get();
         return $predizioni;
@@ -191,13 +200,76 @@ class DataLayer {
         $predizioni = DB::table('Predizione')->where('id_categoria', $id_categoria)->get();
         return $predizioni;
     }
-    
-    public function findPredictionFromId($id_predizione){
+
+    // TO BE FIXED
+    public function findPredictionFromIdCatRecursive($id_categoria) {
+        $predizioni = DB::table('Predizione')->where('id_categoria', $id_categoria)->get();
+        echo gettype($predizioni);
+        exit();
+        $pred_to_return = $this->findPredictionsRecursive($id_categoria, $predizioni);
+        foreach ($pred_to_return as $p) {
+            echo $p . "  ";
+        }
+        exit();
+        return $pred_to_return;
+    }
+
+    // TO BE FIXED
+    public function findPredictionsRecursive($id_categoria, $predizioni) {
+        $categorie_figlie = $this->findCategoriesFromIdPadre($id_categoria);
+        if ($categorie_figlie != null) {
+            foreach ($categorie_figlie as $cat) {
+                //Predizione::findOrFail($cat->id)->delete();
+                $new_predizioni = $this->findPredictionsRecursive($cat->id, $predizioni);
+                foreach ($new_predizioni as $new_pred) {
+                    array_push($predizioni, $new_pred);
+                }
+                return $predizioni;
+            }
+        }
+        return $predizioni;
+    }
+
+    public function getCategoryTree($initial_category) {
+        $categorie = DB::table('Categoria');
+        //$dim = count($categorie);
+        $root = new Node('1');
+        //$padre_id=$initial_category;
+        $this->categoryTreeRecursive($root, $initial_category);
+        /*for ($i = $initial_category; $i <= $dim; $i++) {
+            //$padre = Categoria::find($padre_id);
+            $figli = DB::table('Categoria')->where('id_categoria_padre', $i)->get();
+            if (count($figli) != 0) {
+                foreach ($figli as $f) {
+                    $child = new Node($f->id);
+                    $node->addChild($f);
+                }
+            }
+        }*/
+        return $root;
+    }
+
+    public function categoryTreeRecursive($node, $father_id) {
+        $figli = DB::table('Categoria')->where('id_categoria_padre', $father_id)->get();
+        if (count($figli) != 0) {
+            foreach ($figli as $f) {
+                $child = new Node($f->id);
+                $this->categoryTreeRecursive($child, $f->id);
+                $node->addChild($child);
+            }
+        }
+    }
+
+    public function findPredictionFromId($id_predizione) {
         $predizione = DB::table('Predizione')->where('id', $id_predizione)->get();
         return $predizione;
     }
-    
-    public function getAllSentenze(){
+
+    public function findPredictionById($id) {
+        return Predizione::find($id);
+    }
+
+    public function getAllSentenze() {
         return DB::table('Sentenza')->get();
     }
 

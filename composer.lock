@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6fe7e55f01d961b81b585516aa02c980",
+    "content-hash": "8dccf97951c40291a02e3408aee8e624",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1015,6 +1015,49 @@
                 "source": "https://github.com/briannesbitt/Carbon"
             },
             "time": "2019-10-14T05:51:36+00:00"
+        },
+        {
+            "name": "nicmart/tree",
+            "version": "0.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nicmart/Tree.git",
+                "reference": "049bad40787ad2bc44a916c7bf0ccdd3d3a113b1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nicmart/Tree/zipball/049bad40787ad2bc44a916c7bf0ccdd3d3a113b1",
+                "reference": "049bad40787ad2bc44a916c7bf0ccdd3d3a113b1",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.4 || ^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Tree\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolò Martini",
+                    "email": "nicmartnic@gmail.com"
+                }
+            ],
+            "description": "A basic but flexible php tree data structure and a fluent tree builder implementation.",
+            "support": {
+                "issues": "https://github.com/nicmart/Tree/issues",
+                "source": "https://github.com/nicmart/Tree/tree/0.3.0"
+            },
+            "time": "2020-06-18T07:18:00+00:00"
         },
         {
             "name": "nikic/php-parser",

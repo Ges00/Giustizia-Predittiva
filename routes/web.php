@@ -47,8 +47,10 @@ Auth::routes();
     Route::resource('predizione', 'PredizioneController');
     Route::get('/predizione/{id}/{id_padre}/destroy', ['as' => 'predizione.destroy', 'uses' => 'predizioneController@destroy']);
     Route::get('/predizione/{id}/{id_padre}/destroy/confirm', ['as' => 'predizione.destroy.confirm', 'uses' => 'predizioneController@confirmDestroy']);       
+    Route::get('/predizione/{id}/{id_padre}/edit', ['as' => 'predizione.edit', 'uses' => 'PredizioneController@edit']);
+    Route::get('/predizione/{id}/{id_padre}/update', ['as' => 'predizione.update', 'uses' => 'PredizioneController@update']);
 
-//ROUTE PER L'AUTENTICAZIONE DELL'ADMIN CREATE DA DIEGO BERARDI
+    //ROUTE PER L'AUTENTICAZIONE DELL'ADMIN CREATE DA DIEGO BERARDI
     Route::get('user/login', ['as' => 'user.login', 'uses' => 'AuthController@authentication']); 
     Route::post('user/login', ['as' => 'user.login', 'uses' => 'AuthController@login']); 
     Route::get('user/logout', ['as' => 'user.logout', 'uses' => 'AuthController@logout']);

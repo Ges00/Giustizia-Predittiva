@@ -64,9 +64,9 @@ class PredizioneController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id, $id_padre)
     {
-        //
+        return view('predizione.editPredizione')->with('id', $id)->with('id_padre', $id_padre);
     }
 
     /**
@@ -76,9 +76,12 @@ class PredizioneController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id, $id_padre)
     {
-        //
+        $dl = new DataLayer();
+        $dl->updatePredizione($request->input("se_allora"), $id);
+
+        return Redirect::to(route('categoryChildren',$id_padre));
     }
 
     /**

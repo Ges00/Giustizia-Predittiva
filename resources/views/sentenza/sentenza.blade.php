@@ -32,14 +32,14 @@
             <h5 class="tribunale">{{ $sentenza->corte }}</h5>
             <h6>{{ $sentenza->numero_data }}</h6>
             <p>{{ $sentenza->giudice }}</p>
+            @if($logged)
+            <div class="col-md-12">
+                <a href="{{ route('sentenza.edit', ["id" => $sentenza->id, 'id_padre' => $id_padre]) }}" class="btn btn-light">Modifica</a>
+                <a href="{{ route('sentenza.destroy.confirm', ["id" => $sentenza->id, 'id_padre' => $id_padre])}}" class="btn btn-danger">Elimina</a>
+            </div>
+            @endif
+        </div>
 
-        </div>
-        @if($logged)
-        <div class="col-md-12">
-            <a href="{{ route('sentenza.edit', ["id" => $sentenza->id, 'id_padre' => $id_padre]) }}" class="btn btn-light">Edit</a>
-            <a href="{{ route('sentenza.destroy.confirm', ["id" => $sentenza->id, 'id_padre' => $id_padre])}}" class="btn btn-danger">Delete</a>
-        </div>
-        @endif
     </div>
 
 

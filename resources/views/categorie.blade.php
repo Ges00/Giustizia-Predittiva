@@ -1,12 +1,13 @@
 @extends('layouts.master_protected')
 
 
-@section('loginlogout')
+{{--@section('loginlogout')
 @if($logged)
 <a><i class="pollicino"> Logged in as admin: {{ $loggedName }}</i></a></li>
 @endif
 @endsection
-
+--}}
+            
 @section('corpo')
 <p class="pollicino"><a href="{{ route('home') }}">Home</a>
     @foreach($breadcrumb as $item)
@@ -15,17 +16,17 @@
 </p>
 
 @if($logged)
-<nav class="navbar navbar-expand-lg navbar-light    ">
+<nav class="navbar navbar-expand-lg navbar-light" style="margin-top:25px; margin-bottom: -30px; margin-left:-18px">
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav" >
             <li class="nav-item" >
-                <a class="btn btn-light btn-margin-left btn-margin-right" href="{{ route('categoria.create', ['id' => $superCategory->id]) }}">New Category</a>
+                <a class="btn btn-light btn-margin-left btn-margin-right" href="{{ route('categoria.create', ['id' => $superCategory->id]) }}">Nuova Categoria</a>
             </li>
             <li class="nav-item" >
-                <a class="btn btn-light btn-margin-left btn-margin-right" href="{{ route('predizione.create', ['id' => $superCategory->id]) }}">New Prediction</a>
+                <a class="btn btn-light btn-margin-left btn-margin-right" href="{{ route('predizione.create', ['id' => $superCategory->id]) }}">Nuova Predizione</a>
             </li>
             <li class="nav-item" >
-                <a class="btn btn-danger btn-margin-left btn-margin-right" href="{{ route('categoria.destroy.confirm', ['id' => $superCategory->id]) }}">Delete Category</a>
+                <a class="btn btn-danger btn-margin-left btn-margin-right" href="{{ route('categoria.destroy.confirm', ['id' => $superCategory->id]) }}">Elimina Categoria</a>
             </li>
         </ul>
     </div>
@@ -78,7 +79,8 @@
             <p><?php echo $pred->se_allora ?></p>
             <p><a class="btn btn-default" href="{{ route('sentenza.show', ['sentenza' => $pred->id_sentenza, 'cat' => $superCategory->id]) }}"><img src="{{ url('/') }}/img/img_550706.png" width="20"/> Vai al caso</a></p>
             @if($logged)
-            <p><a class="btn btn-danger" href="{{ route('predizione.destroy.confirm', ['id' => $pred->id, 'id_padre'=> $superCategory->id]) }}">Delete Prediction</a></p>
+            <a class="btn btn-light" href="{{ route('predizione.edit', ['id' => $pred->id, 'id_padre'=> $superCategory->id]) }}">Modifica Predizione</a>
+            <a class="btn btn-danger" href="{{ route('predizione.destroy.confirm', ['id' => $pred->id, 'id_padre'=> $superCategory->id]) }}">Elimina Predizione</a>
             @endif
         </div>
         @endforeach 
@@ -100,6 +102,7 @@
             <p><?php echo $pred->se_allora ?></p>
             <p><a class="btn martello" href="{{ route('sentenza.show', ['sentenza' => $pred->id_sentenza, 'cat' => $superCategory->id]) }}"><img src="{{ url('/') }}/img/martello.png" width="20"/> Vai al caso</a></p>
             @if($logged)
+            <p><a class="btn btn-light" href="{{ route('predizione.edit', ['id' => $pred->id, 'id_padre'=> $superCategory->id]) }}">Edit prediction</a></p>
             <p><a class="btn btn-danger" href="{{ route('predizione.destroy.confirm', ['id' => $pred->id, 'id_padre'=> $superCategory->id]) }}">Delete prediction</a></p>
             @endif
         </div>

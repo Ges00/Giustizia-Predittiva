@@ -11,6 +11,15 @@
         <link rel="stylesheet" type="text/css" href="{{ url('/') }}/css/stili.css" >
 
 
+        <!-- CODICE PER WYSIWYG-->
+        <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+        <script>
+        tinymce.init({
+            selector: 'textarea#editor',
+            menubar: false
+        });
+        </script>
+        
         <!-- CODICE PER WYSIWYG include libraries(jQuery, bootstrap)
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -18,7 +27,11 @@
 
          include summernote css/js 
         <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script> 
+        
+        <script src="https://cdn.ckeditor.com/ckeditor5/30.0.0/classic/ckeditor.js"></script>
+
+        -->
 
         <title>Giustizia Predittiva</title>
     </head>
