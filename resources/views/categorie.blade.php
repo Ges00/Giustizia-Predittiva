@@ -23,6 +23,9 @@
                 <a class="btn btn-light btn-margin-left btn-margin-right" href="{{ route('categoria.create', ['id' => $superCategory->id]) }}">Nuova Categoria</a>
             </li>
             <li class="nav-item" >
+                <a class="btn btn-light btn-margin-left btn-margin-right" href="{{ route('categoria.edit', ['id' => $superCategory->id]) }}">Modifica Categoria</a>
+            </li>
+            <li class="nav-item" >
                 <a class="btn btn-light btn-margin-left btn-margin-right" href="{{ route('predizione.create', ['id' => $superCategory->id]) }}">Nuova Predizione</a>
             </li>
             <li class="nav-item" >

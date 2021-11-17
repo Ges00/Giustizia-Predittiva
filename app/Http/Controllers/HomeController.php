@@ -36,28 +36,26 @@ class HomeController extends Controller {
         $dl = new DataLayer();
         $categoryLavoro = $dl->findCategoriaLavoro();
         $categoryImprese = $dl->findCategoriaImprese();
-        $root = $dl->getCategoryTree(1);
+        //$root = $dl->getCategoryTree(1);
         /* $childrens = $root->getChildren();
           foreach($childrens as $child){
           echo $child->getValue()."  ";
           }
           exit(); */
-        $this->showTreeRecursive($root);
-        exit();
+        //$this->showTreeRecursive($root);
+        //exit();
         session_start();
 
         if (isset($_SESSION['logged'])) {
             return view('index')->with('lavoro', $categoryLavoro)->with('imprese', $categoryImprese)
-                            ->with('logged', true)->with('loggedName', $_SESSION['loggedName'])
-                            ->with('tree', $root);
+                            ->with('logged', true)->with('loggedName', $_SESSION['loggedName']);
         } else {
             return view('index')->with('lavoro', $categoryLavoro)->with('imprese', $categoryImprese)
-                            ->with('logged', false)
-                            ->with('tree', $root);
+                            ->with('logged', false);
         }
     }
 
-    function showTreeRecursive($node) {
+    /*function showTreeRecursive($node) {
         echo "<ul>";
         $childrens = $node->getChildren();
         foreach ($childrens as $child) {
@@ -65,6 +63,6 @@ class HomeController extends Controller {
             $this->showTreeRecursive($child);
         }
         echo "</ul>";
-    }
+    }*/
 
 }

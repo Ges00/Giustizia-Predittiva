@@ -66,7 +66,9 @@ class PredizioneController extends Controller
      */
     public function edit($id, $id_padre)
     {
-        return view('predizione.editPredizione')->with('id', $id)->with('id_padre', $id_padre);
+        $dl = new DataLayer();
+        $pred_to_edit=$dl ->findPredictionByID($id);    
+        return view('predizione.editPredizione')->with('pred_to_edit', $pred_to_edit)->with('id', $id)->with('id_padre', $id_padre);
     }
 
     /**

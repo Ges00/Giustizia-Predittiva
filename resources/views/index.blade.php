@@ -23,23 +23,6 @@
 @section('corpo')
 <h1 class="tit_home">Sistema di giustizia predittiva del Tribunale di Brescia</h1>
 <div class="row">
-    <?php
-    function showTreeRecursive($node) {
-    echo "<ul>";
-    $childrens = $node->getChildren();
-    foreach ($childrens as $child) {
-        echo "<li>" . $child->getValue() . "</li>";
-    }
-    echo "</ul>";
-}
-;
-    echo $tree->getValue;
-    exit();
-    showTreeRecursive($root);
-    ?>
-
-</div>
-<div class="row">
     <div class="col-md-6">
         <div class="box">
             <h2><a href="{{ route('categoryChildren',[$lavoro->id]) }}">Diritto del lavoro</a></h2>

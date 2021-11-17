@@ -7,11 +7,8 @@
         <div class="col-md-12">
             <header>
                 <h1 class="confirm-delete">
-                    Delete sentenza "{{ $numero_data }}" and the associated predictions:
+                    Delete sentenza "{{ $numero_data }}" and the associated predictions
                 </h1>
-                @foreach($predizioni as $pred)
-                <p class="confirm-delete">"{{$pred->id}}"</p>
-                @endforeach
             </header>
             <p class='lead confirm-delete'>
                 Deleting sentenza. Confirm?
@@ -46,5 +43,25 @@
             </div>
         </div>
     </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="confirm-delete text-center" style="margin-bottom: 100px; margin-top:100px">
+            Predizioni associate alla sentenza che verranno eliminate:
+        </h1>
+    </div>
+
+    @if(count($predizioni)!=0)
+    <div class="col-md-12 col-sm-6 col-6">
+        @foreach($predizioni as $pred)
+        <div class="box box2">
+            <h3>Predizione {{$pred->id}}</h3>
+            <!--<p>{{ $pred->se_allora }}</p>-->
+            <p><?php echo $pred->se_allora ?></p>
+        </div>
+        @endforeach 
+    </div>
+    @endif
 </div>
 @endsection

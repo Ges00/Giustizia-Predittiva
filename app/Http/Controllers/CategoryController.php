@@ -8,15 +8,15 @@ use giustiziapredittiva\DataLayer;
 
 class CategoryController extends Controller {
 
-    public function index(){
+    public function index() {
         return "index category";
     }
-    
-    public function create(Request $request){
+
+    public function create(Request $request) {
         return view("categoria.createCategoria")->with('id_padre', $request->input("id"));
     }
-    
-    public function store(Request $request){
+
+    public function store(Request $request) {
         $dl = new DataLayer();
         $request->validate([
             'nome' => 'required',
@@ -24,20 +24,25 @@ class CategoryController extends Controller {
         $dl->addCategoria($request->input("nome"), $request->input("dettagli"), $request->input("id_padre"));
         return Redirect::to(route('categoryChildren', $request->input('id_padre')));
     }
-    
-    public function show(){
+
+    public function show() {
         return "show category";
     }
-    
-    public function edit($id){
-        return "edit category";
+
+    public function edit($id) {
+        $dl = new DataLayer();
+        //$root = $dl->getCategoryTree(1);
+        $catToEdit = $dl->findCategoryByID($id);
+        return view('categoria.editCategoria')->with('cat_to_edit', $catToEdit);
     }
-    
-    public function update(Request $request, $id){
-        return "update category";
+
+    public function update(Request $request, $id) {
+        $dl = new DataLayer();
+        $dl->updateCategoria($request->input("nome"), $request->input("dettagli"), $id);
+        return Redirect::to(route('categoryChildren', $id));
     }
-    
-    public function destroy($id){
+
+    public function destroy($id) {
         $dl = new DataLayer();
         //echo "destroying sentenza: ";
         //echo $id;
@@ -46,21 +51,27 @@ class CategoryController extends Controller {
         $dl->deleteCategorieRecursive($id);
         return Redirect::to(route('home'));
     }
-    
-    public function confirmDestroy($id){
-    
+
+    public function confirmDestroy($id) {
+
         $dl = new DataLayer();
 
         $categoria = $dl->findCategoryByID($id);
         $categorie_figlie = $dl->findCategoriesFromIdPadre($id);
-        $predizioni = $dl ->findPredictions($id);
+        $predizioni = $dl->findPredictions($id);
+        $all_pred = array();
+        foreach ($predizioni as $pred) {
+            $all_pred[] = $pred;
+        }
+        // ci sono più elemento identici, capire perché!!
+        $all_pred = $dl->predRecursive($id, $all_pred);
+
         // $predizioni = $dl->findPredictionFromIdCatRecursive($id);
         // il problema è questo return, ovvero il modo in cui viene ritornata la view
         return view('categoria.deleteCategoria')->with('nome', $categoria->nome)
-                ->with('id_categoria', $id)->with('categorie_figlie', $categorie_figlie)->with('predizioni', $predizioni);
-    
+                        ->with('id_categoria', $id)->with('categorie_figlie', $categorie_figlie)->with('predizioni', $all_pred);
     }
-    
+
     public function children($id) {
         session_start();
         $dl = new DataLayer();
@@ -71,15 +82,14 @@ class CategoryController extends Controller {
             $categoryChildren = $dl->findCategoryChildrenByID($id);
             $breadcrumb = $dl->buildBreadcrumb($id);
             $predizioni = $dl->findPredictions($id);
-            if(isset($_SESSION['logged'])){
+            if (isset($_SESSION['logged'])) {
                 return view('categorie')->with('superCategory', $categoriaPadre)->with('categoryList', $categoryChildren)->with('breadcrumb', $breadcrumb)
-                    ->with('predizioni', $predizioni)->with('logged', true)->with('loggedName', $_SESSION['loggedName']);
-            } else{
+                                ->with('predizioni', $predizioni)->with('logged', true)->with('loggedName', $_SESSION['loggedName']);
+            } else {
                 return view('categorie')->with('superCategory', $categoriaPadre)->with('categoryList', $categoryChildren)->with('breadcrumb', $breadcrumb)
-                    ->with('predizioni', $predizioni)->with('logged', false)->with('loggedName', NULL);
+                                ->with('predizioni', $predizioni)->with('logged', false)->with('loggedName', NULL);
             }
         }
-        
     }
 
     public function lavoro() {

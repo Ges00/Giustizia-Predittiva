@@ -59,7 +59,9 @@ class SentenzaController extends Controller {
     }
 
     public function edit($id, $id_padre) {
-        return view('sentenza.modificaSentenza')->with('id', $id)->with('id_padre', $id_padre);
+        $dl = new DataLayer();
+        $sent_to_edit=$dl ->findSentenzaByID($id);
+        return view('sentenza.modificaSentenza')->with('sent_to_edit', $sent_to_edit)->with('id', $id)->with('id_padre', $id_padre);
     }
 
     public function update(Request $request, $id, $id_padre) {

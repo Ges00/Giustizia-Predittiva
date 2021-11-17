@@ -42,6 +42,8 @@ Auth::routes();
     Route::resource('categoria', 'CategoryController');
     Route::get('/categoria/{id}/destroy', ['as' => 'categoria.destroy', 'uses' => 'CategoryController@destroy']);
     Route::get('/categoria/{id}/destroy/confirm', ['as' => 'categoria.destroy.confirm', 'uses' => 'CategoryController@confirmDestroy']);       
+    Route::get('/categoria/{id}/update', ['as' => 'categoria.update', 'uses' => 'CategoryController@update']);
+//Route::get('/categoria/{id}/edit', ['as' => 'categoria.edit', 'uses' => 'CategoryController@edit']);
 
     // route gestione predizioni
     Route::resource('predizione', 'PredizioneController');

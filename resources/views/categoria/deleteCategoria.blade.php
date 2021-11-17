@@ -50,6 +50,12 @@
 </div>
 
 <div class="row">
+    <div class="col-md-12">
+        <h1 class="confirm-delete text-center" style="margin-bottom: 100px; margin-top:100px">
+            Predizioni associate alla sentenza che verranno eliminate:
+        </h1>
+    </div>
+
     @if(count($predizioni)!=0)
     <div class="col-md-12 col-sm-6 col-6">
         @foreach($predizioni as $pred)

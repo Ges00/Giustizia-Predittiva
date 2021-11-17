@@ -37,19 +37,23 @@
                 </div>
                 <label for="caso" class="col-md-2 tribleft">Caso</label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" id="caso" name="caso" placeholder="caso">
+<!--                    <input class="form-control" type="text" id="caso" name="caso" placeholder="caso">-->
+                    <textarea id="editor" name="caso" type="text"></textarea>
                 </div>
                 <label for="massima" class="col-md-2 tribleft">Massima</label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" id="massima" name="massima" placeholder="massima">
+<!--                    <input class="form-control" type="text" id="massima" name="massima" placeholder="massima">-->
+                    <textarea id="editor" name="massima" type="text"></textarea>
                 </div>
                 <label for="decisione" class="col-md-2 tribleft">Decisione</label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" id="decisione" name="decisione" placeholder="decisione">
+<!--                    <input class="form-control" type="text" id="decisione" name="decisione" placeholder="decisione">-->
+                    <textarea id="editor" name="decisione" type="text"></textarea>
                 </div>
                 <label for="provvedimento" class="col-md-2 tribleft">Provvedimento</label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" id="provvedimento" name="provvedimento" placeholder="provvedimento">
+<!--                    <input class="form-control" type="text" id="provvedimento" name="provvedimento" placeholder="provvedimento">-->
+                    <textarea id="editor" name="provvedimento" type="text"></textarea>
                 </div>
             </div>
             <div class="form-group">

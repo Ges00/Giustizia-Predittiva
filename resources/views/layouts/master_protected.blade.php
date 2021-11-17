@@ -14,12 +14,22 @@
         <!-- CODICE PER WYSIWYG-->
         <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
         <script>
-        tinymce.init({
-            selector: 'textarea#editor',
-            menubar: false
-        });
+tinymce.init({
+    selector: 'textarea',
+    menubar: false
+});
         </script>
         
+<!--        simple tree
+        <link rel="stylesheet" href="tree.css">
+        -->
+        <!-- CODICE PER ALBERO DELLE CATEGORIA DINAMICO -->
+        <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link href="//cdn.jsdelivr.net/npm/jquery.fancytree@2.27/dist/skin-win8/ui.fancytree.min.css" rel="stylesheet">
+        <script src="//cdn.jsdelivr.net/npm/jquery.fancytree@2.27/dist/jquery.fancytree-all-deps.min.js"></script>
+        <!-- Initialize the tree when page is loaded -->
+
+
         <!-- CODICE PER WYSIWYG include libraries(jQuery, bootstrap)
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -48,7 +58,6 @@
                 </div>
             </div>
         </div>
-
         <div class="blue">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container">
@@ -61,7 +70,7 @@
                 @yield('corpo')
             </div>
         </div>
-
+        
         <div class="footer">
             <div class="container">
                 <h6 class="collab">In collaborazione con</h6>
