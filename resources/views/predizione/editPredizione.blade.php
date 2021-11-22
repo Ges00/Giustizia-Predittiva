@@ -8,7 +8,7 @@
             <div class="form-group">
                 <label for="se_allora" class="col-md-2 tribleft">Se Allora</label>
                 <div class="col-sm-10">
-                    <textarea id="editor" name="se_allora" type="text" placeholder="{{$pred_to_edit->se_allora}}"-></textarea>
+                    <textarea id="editor" name="se_allora" type="text" placeholder="se_allora">{{$pred_to_edit->se_allora}}</textarea>
                 </div>
             </div>
             <div class="form-group">

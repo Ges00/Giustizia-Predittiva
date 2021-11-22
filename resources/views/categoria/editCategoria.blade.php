@@ -11,7 +11,7 @@
                 </div>
                 <label for="dettagli" class="col-md-2 tribleft">Dettagli</label>
                 <div class="col-sm-10">
-                    <textarea id="editor" name="dettagli" type="text" placeholder="{{$cat_to_edit->dettagli}}"></textarea>
+                    <textarea id="editor" name="dettagli" type="text" placeholder="dettagli">{{$cat_to_edit->dettagli}}</textarea>
                 </div>
             <div class="form-group">
                 <div class="col-sm-10 col-sm-offset-2">

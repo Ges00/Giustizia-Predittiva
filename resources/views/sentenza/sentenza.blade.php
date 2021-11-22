@@ -14,19 +14,19 @@
         <div class="box box2">
             @if($sentenza->caso != " ")
             <h2>Il Caso</h2>
-            <p>{{ $sentenza->caso }}</p>
+            <?php echo "<p>$sentenza->caso</p>";?>
             @endif
             @if($sentenza->massima != " ")
             <h2>La Massima</h2>
-            <p>{{ $sentenza->massima }}</p>
+            <?php echo "<p>$sentenza->massima</p>";?>
             @endif
             @if($sentenza->decisione != " ")
             <h2>La Decisione</h2>
-            <p>{{ $sentenza->decisione }}</p>
+            <?php echo "<p>$sentenza->decisione</p>";?>
             @endif
             @if($sentenza->provvedimento != " ")
             <h2>Il provvedimento</h2>
-            <p>{{ $sentenza->provvedimento }}</p>
+            <?php echo "<p>$sentenza->provvedimento</p>";?>
             @endif
             <br>
             <h5 class="tribunale">{{ $sentenza->corte }}</h5>

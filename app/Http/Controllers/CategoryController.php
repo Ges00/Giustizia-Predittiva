@@ -33,6 +33,7 @@ class CategoryController extends Controller {
         $dl = new DataLayer();
         //$root = $dl->getCategoryTree(1);
         $catToEdit = $dl->findCategoryByID($id);
+        
         return view('categoria.editCategoria')->with('cat_to_edit', $catToEdit);
     }
 
